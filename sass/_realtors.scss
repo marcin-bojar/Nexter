@@ -15,6 +15,11 @@
     align-content: center;
     justify-items: center;
     row-gap: 2rem;
+
+    @include respond(medium) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
     
 
     &__list {
@@ -23,6 +28,14 @@
         column-gap: 2rem;
         row-gap: 5vh;
         align-items: center;
+
+        @include respond(medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @include respond(small) {
+            grid-template-columns: min-content max-content;
+        }
     }
 
     &__img {

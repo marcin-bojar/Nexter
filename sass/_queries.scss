@@ -1,0 +1,21 @@
+@mixin respond($bp) {
+    //1200px
+    @if $bp == largest {
+        @media only screen and (max-width: 75em) { @content }
+    }
+
+    //1000px
+    @if $bp == large {
+        @media only screen and (max-width:62.5em) { @content }
+    }
+
+    //800px
+    @if $bp == medium {
+        @media only screen and (max-width: 50em) { @content }
+    }
+
+    //600px
+    @if $bp == small {
+        @media only screen and (max-width: 37.5em) { @content }
+    }
+}

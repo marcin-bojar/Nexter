@@ -7,6 +7,16 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 6rem;
     align-items: start;
+
+    @include respond(medium) {
+        margin: 8rem 0;
+        
+    }
+
+    @include respond(small) {
+        margin: 5rem 0;
+        gap: 4rem;
+    }
     
 }
 
